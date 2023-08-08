@@ -1,0 +1,59 @@
+.login-page {
+  height: 100vh !important;
+  width: 100vw !important;
+  display: flex;
+  flex-direction: column; /* Adjusted to display title on top */
+  justify-content: flex-start; /* Adjusted to display title on top */
+  box-shadow: rgba(0, 0, 0, 0) 0px 5px 5px;
+  background-color: #f0f2f5; /* Added background color */
+}
+
+.page-title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  font-family: 'Pacifico', cursive;
+  color: #448ec3;
+  margin: 30px 0; /* Added margin for spacing */
+}
+
+.login-form {
+  background-color: #86cf2db6;
+  margin: 0px;
+  padding: 30px; /* Adjusted padding for better spacing */
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 5px; /* Adjusted box shadow */
+}
+
+.login-form h1 {
+  text-align: center;
+  font-weight: bold;
+  color: #344265;
+  margin-bottom: 20px; /* Adjusted margin for spacing */
+}
+
+.login-form .ant-form-item-label label {
+  color: #344265 !important;
+}
+
+.login-form button {
+  background-color: #344265;
+  color: white;
+  outline: none;
+  border: none; /* Removed button border */
+  padding: 10px 20px; /* Added padding for better button appearance */
+  border-radius: 5px; /* Added border radius for a rounded button */
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  background-color: black;
+}
+
+.login-form a {
+  color: #020511 !important;
+  text-decoration: underline; /* Added underline for link */
+}
+
+.login-form a:hover {
+  color: rgb(192, 13, 13) !important;
+}
