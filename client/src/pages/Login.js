@@ -37,49 +37,50 @@ const Login = () => {
 
   return (
     <div className="login-page">
-      <h1 className="page-title">MoneyMinder</h1>
-      {loading && <Spinner />}
-      <div className="row container">
-        <div className="col-md-8">
-          <img src={img} alt="login-img" width={"100%"} height="100%" />
-        </div>
-        <div className="col-md-4 login-form">
-          <Form
-            layout="vertical"
-            form={form}
-            onFinish={submitHandler}
-            initialValues={{ email: "", password: "" }}
+    <h1 className="page-title">MoneyMinder</h1>
+    {loading && <Spinner />}
+    <div className="row container">
+      <div className="col-md-8">
+        <img src={img} alt="login-img" className="login-image" />
+      </div>
+      <div className="col-md-4 login-form">
+        <Form
+          layout="vertical"
+          form={form}
+          onFinish={submitHandler}
+          initialValues={{ email: "", password: "" }}
+        >
+          <h3 className="login-header">User Login</h3>
+          <Form.Item
+            label="Email"
+            name="email"
+            rules={[
+              { required: true, message: "Please enter your email" },
+              { type: "email", message: "Invalid email format" },
+            ]}
           >
-            <h3>Login Form</h3>
-            <Form.Item
-              label="Email"
-              name="email"
-              rules={[
-                { required: true, message: "Please enter your email" },
-                { type: "email", message: "Invalid email format" },
-              ]}
-            >
-              <Input type="email" />
-            </Form.Item>
-            <Form.Item
-              label="Password"
-              name="password"
-              rules={[{ required: true, message: "Please enter your password" }]}
-            >
-              <Input.Password />
-            </Form.Item>
-            <div className="d-flex justify-content-between">
-              <Link to="/register" className="login-link">
-                Not a user? Click Here to register!
-              </Link>
-              <button className="login-button" type="submit" disabled={loading}>
-                {loading ? "Logging in..." : "Login"}
-              </button>
-            </div>
-          </Form>
-        </div>
+            <Input type="email" />
+          </Form.Item>
+          <Form.Item
+            label="Password"
+            name="password"
+            rules={[{ required: true, message: "Please enter your password" }]}
+          >
+            <Input.Password />
+          </Form.Item>
+          <div className="login-button-container">
+            <Link to="/register" className="login-link">
+              Not a user? Click Here to register!
+            </Link>
+            <button className="login-button" type="submit" disabled={loading}>
+              {loading ? "Logging in..." : "Login"}
+            </button>
+          </div>
+        </Form>
       </div>
     </div>
+  </div>
+  
   );
 };
 
