@@ -29,8 +29,9 @@ const Register = () => {
   }, [navigate]);
   return (
     <>
+    {loading && <Spinner />}
       <div className="register-page ">
-        {loading && <Spinner />}
+        
         <Form
           className="register-form"
           layout="vertical"

@@ -64,13 +64,13 @@ const Analytics = ({ allTransaction }) => {
                   type="circle"
                   strokeColor={"green"}
                   className="mx-2"
-                  percent={totalIncomePercent.toFixed(0)}
+                  percent={totalIncomePercent.toFixed(2)}
                 />
                 <Progress
                   type="circle"
                   strokeColor={"red"}
                   className="mx-2 mt-3"
-                  percent={totalExpensePercent.toFixed(0)}
+                  percent={totalExpensePercent.toFixed(2)}
                 />
               </div>
             </div>
@@ -87,13 +87,13 @@ const Analytics = ({ allTransaction }) => {
                   type="circle"
                   strokeColor={"green"}
                   className="mx-2"
-                  percent={totalIncomeTurnoverPercent.toFixed(0)}
+                  percent={totalIncomeTurnoverPercent.toFixed(2)}
                 />
                 <Progress
                   type="circle"
                   strokeColor={"red"}
                   className="mx-2 mt-3"
-                  percent={totalExpenseTurnoverPercent.toFixed(0)}
+                  percent={totalExpenseTurnoverPercent.toFixed(2)}
                 />
               </div>
             </div>

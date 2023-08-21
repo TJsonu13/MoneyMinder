@@ -1,7 +1,7 @@
 .login-page {
   height: 100vh !important;
   width: 100vw !important;
-  display: flex;
+  display: -webkit-flex;
   flex-direction: column; /* Adjusted to display title on top */
   justify-content: flex-start; /* Adjusted to display title on top */
   box-shadow: rgba(0, 0, 0, 0) 0px 5px 5px;
